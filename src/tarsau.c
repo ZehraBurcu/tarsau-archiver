@@ -8,6 +8,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <errno.h>
+#include <dirent.h>
 
 // İzin verilen maksimum dosya sayısı
 #define MAX_FILES 32
@@ -142,6 +143,7 @@ void archive_files(char *files[], int file_count, const char *output_file) {
     }
     
     close(out_fd);
+    fprintf(stdout, "Dosyalar birleştirildi.\n");
 }
 
 /**
